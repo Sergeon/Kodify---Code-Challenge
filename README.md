@@ -23,7 +23,7 @@ Para modificar vistas o scripts y/o utilizar scripts, es necesario ejecutar:
 Es necesario modificar el fichero /.env para indicar el usuario y el password de la base de datos
 y la database que se va a utilizar.
 
-La aplicación debe correr sin problemas en una máquina vagrant/homestead.
+La aplicación debe correr sin problemas en una máquina [vagrant/homestead](https://laravel.com/docs/5.2/homestead).
 
 ##discusion
 Hay un archivo discusion.md con información sobre la estructura de la aplicación .

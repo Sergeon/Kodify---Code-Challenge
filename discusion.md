@@ -82,3 +82,7 @@ Aunque solo se ha codificado para la interfaz lo que se pedía en el lema del ej
 varios ficheros de tests unitarios donde se prueban los métodos de los modelos que implican relaciones entre clases
 (por ejemplo para obtener las empresas de un acuerdo dado, crear nuevas cuentas de empresa, crear cuentas de administrador
 etc. etc. )
+
+
+### Librerías
+Para el backend se ha utilizado Laravel 5.2 y su ORM Eloquent. Para el look and feel he usado materialize.
