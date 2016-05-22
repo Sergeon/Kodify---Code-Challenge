@@ -16,7 +16,7 @@ Code Challenge for [Dokify] (https://dokify.net)
 
 `vendor/bin/mat test tests/matura/test_index.php`
 
-Para modificar vistas o scripts y/o utilizar scripts, es necesario ejecutar:
+Para modificar vistas o scripts y/o utilizar gulp, es necesario ejecutar:
 
 `npm install`
 
