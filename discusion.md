@@ -30,10 +30,11 @@ Lo importante del asunto, a mi entender, es que los acuerdos entre empresas
 entiendo que la relación cliente-proveedor es puramente simétrica: si una empresa A es proveedora de B,
 entonces B es cliente de A, y vice versa.
 
-Para representar esto se ha creado una tabla relaciones con dos identificadores, que apuntan a dos
+Para representar esto se ha creado una tabla "relaciones" con dos identificadores, que apuntan a dos
 empresas como cliente y proveedor.
 
 Que los acuerdos solo se puedan crear en sentido descendente, implica las siguientes propiedades:
+
 Sea la empresa A proveedora de B, y B a su vez de C y cliente de D,
 un acuerdo A -> B -> C (de ahora en adelante, 'X -> Y' significa que la empresa X es
 proveedora de Y ) es posible, pero un acuerdo [A->B + D->B], donde el acuerdo
@@ -46,7 +47,7 @@ relaciones pueden formar un acuerdo y cuál es la única estructura posible de e
 
 Por ejemplo las relaciones i = A -> B , ii = B -> C , iii = C -> D , son un conjunto candidato
 para formar el acuerdo válido A -> B -> C -> D. Además, de la información obtenida
-en el set [i ,ii , iii , iiii ] podemos saber con toda seguridad que el acuerdo debe ser
+en el set [i ,ii , iii  ] podemos saber con toda seguridad que el acuerdo debe ser
 A -> B -> C -> D , y que ese es el único acuerdo posible formado por ese conjunto de relaciones.
 
 En cambio si un acuerdo como [A -> B , B -> A ] , representando que A provee a B de un cierto bien, B fabrica otro con ello y, al final, lo entrega a A,
@@ -65,7 +66,11 @@ Un acuerdo se considera aceptado si todas las empresas le han dado su benepláci
 ### Uso
 
 Una vez que se hace login (hay que seedear la db primero, bien con artisan o bien ejecutando los tests ),
-se debe loguear con una cuenta de empresa que dirigirá a la página /empresa. Allí se ha alojado
+se debe loguear con una cuenta de empresa que dirigirá a la página /empresa.
+
+(la cuenta fake con user 'satoshi' y password 'hascash' es la que tiene más relaciones cargadas una vez que se ha seedeado).
+
+Allí se ha alojado
 la interfaz HTML para acceder a las relaciones comerciales de la empresa dada. Ordena los datos por nombre
 y por el tipo de relación comercial. Todas las interacciones de los filtros van por ajax.
 
@@ -76,4 +81,4 @@ y tal vez los parciales bajo /resources/views/partials/database/
 Aunque solo se ha codificado para la interfaz lo que se pedía en el lema del ejercicio, bajo tests/matura hay
 varios ficheros de tests unitarios donde se prueban los métodos de los modelos que implican relaciones entre clases
 (por ejemplo para obtener las empresas de un acuerdo dado, crear nuevas cuentas de empresa, crear cuentas de administrador
-etc. etc. ) 
+etc. etc. )
