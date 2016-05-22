@@ -35,7 +35,7 @@ empresas como cliente y proveedor.
 
 Que los acuerdos solo se puedan crear en sentido descendente, implica las siguientes propiedades:
 
-Sea la empresa A proveedora de B, y B a su vez de C y cliente de D,
+Sea la empresa A proveedora de B, y B a su vez de C,
 un acuerdo A -> B -> C (de ahora en adelante, 'X -> Y' significa que la empresa X es
 proveedora de Y ) es posible, pero un acuerdo [A->B + D->B], donde el acuerdo
 consistiría en que las empresas A y D transfieren algún bien a B, no es posible.
