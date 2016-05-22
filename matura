@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+    $result = shell_exec( 'php --color="always" vendor/bin/mat test tests/matura/test_index.php');
+
+    echo $result;
+
+
+
+?>
